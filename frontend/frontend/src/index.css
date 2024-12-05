@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -5,7 +6,15 @@ body {
   background-color: #f4f4f4; 
 }
 
+/* Font for Header */
+
+@font-face {
+  font-family: "Chakra Petch", sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=VT323&display=swap');
+}
+
 header {
+  font-family: 'Chakra Petch';
   background-color: #8B0000; 
   color: white; 
   padding: 0px 20px; 
@@ -36,7 +45,6 @@ a:hover {
 }
 
 .Menu {
-  border:1px solid white;
   display: inline-flex;
   width: 20%;
   padding: 5px;
@@ -58,6 +66,7 @@ a:hover {
 
   Header {
     height: 50px;
+    font-family: "Chakra Petch", sans-serif;
   }
 
   .Menu {
