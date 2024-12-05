@@ -13,7 +13,7 @@ const Navbar = () => {
         <header>
             <div className='Container'>
                 <Link to='/'>
-                    <h1>OBD Place Holder</h1>
+                    <h1>Top Speed OBD</h1>
                 </Link>
 
                 <button className='MenuButton' onClick={toggleMenu}>
