@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // components
 import Navbar from "./components/Navbar";
-import Hero from "./components/hero-section"
+import Hero from "./components/hero-section";
+import CodeContainer from "./components/codeContainer";
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
           </Routes>
           {/* Leading Hero section */}
           <Hero/>
+          {/**OBDII code container to list codes*/}
+          <CodeContainer/>
         </div> 
       </BrowserRouter>
     </div>

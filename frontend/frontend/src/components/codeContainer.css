@@ -1,0 +1,55 @@
+div.parent {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+div.codeContainer {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    height: 50%;
+    background-color: white;
+    border:1px solid;
+    border-radius: 20px;
+}
+
+input.codeInput {
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 2%;
+    width: 30%;
+    height: 20%;
+    align-self: center;
+    justify-self: right;
+    margin-left: auto;
+    font-size: 24px;
+    font-family: "Chakra Petch", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-right: 5px;
+
+}
+
+button.searchButton {
+    margin-left:58%;
+    margin-right:5px;
+    justify-self: right;
+    height:70%;
+    width: 9%;
+    font-family: "Chakra Petch", serif;
+    font-weight: 600;
+    font-size: 1.75em;
+    border-radius: 15px;
+}
+
+button.searchButton:active {
+    color:white;
+    background-color: black;
+}
