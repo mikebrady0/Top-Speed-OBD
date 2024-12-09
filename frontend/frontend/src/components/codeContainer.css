@@ -93,9 +93,11 @@ button.searchButton:active {
 }
 
 div.resultContainer {
-    width: 90vw;
+    width: 91.204%;
     margin-top: 30px;
     padding: 20px;
     border: 1px solid;
     box-sizing: border-box;
+    border-radius: 20px;
+    background-color: white;
 }
