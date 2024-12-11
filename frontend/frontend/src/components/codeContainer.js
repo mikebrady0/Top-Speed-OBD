@@ -7,6 +7,7 @@ const CodeContainer = () => {
     const [year, setYear] = useState('');
     const [make, setMake] = useState('');
     const [model, setModel] = useState('')
+    const [error, setError] = useState(null);
 
     const handleCodeChange = (e) => {
         setCode(e.target.value);
@@ -25,13 +26,25 @@ const CodeContainer = () => {
     };
 
     const handleSearch = async () => {
-        try {
-            const response = await fetch('https://api.placeholder.com/obdii/${code}');
+
+        // API CALL -------------------------------------------------------------------- //
+        const response = await fetch(`https://car-code.p.rapidapi.com/obd2/${code}`, {
+            method: 'GET',
+            headers: {
+                'x-rapidapi-key': '1a59355c55msh2d230a5511a7816p1404fcjsnec688db80a30',
+                'x-rapidapi-host': 'car-code.p.rapidapi.com'
+            }
+        });
+
+        if (response.ok) {
             const data = await response.json();
-            setResult(data);
-        } catch (error) {
-            console.error('Error fetching OBDII code:', error);
-            setResult({ error: `Failed to fetch OBDII information: ${year} ${make} ${model}`});
+            if (data) {
+                setResult(data);
+            } else {
+                setResult({error : 'No data found in this code.'});
+            }
+        } else {
+            setResult({error: 'Code not found'});
         }
     };
 
@@ -50,9 +63,20 @@ const CodeContainer = () => {
                     {result.error ? (
                         <p>{result.error}</p>
                     ) : (
-                        <p>{JSON.stringify(result)}</p>
+                        <div>
+                            <h3><strong>{year} {make} {model}</strong></h3>
+                            <p><strong>{result.code}: {result.definition}</strong></p>
+                                <div>
+                                    <p>Possible Causes</p>
+                                        <ul>
+                                            {result.cause.map((item, index) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
+                                        </ul>
+                                </div>
+                            </div>
                     )}
-                    </div>
+                </div>
             )}
         </div>
     );
