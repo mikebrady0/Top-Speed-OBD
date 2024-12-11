@@ -10,6 +10,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif; 
   background-color:rgba(112, 101, 101, 0.21);
+  overflow-x:hidden ;
 
 }
 
@@ -84,6 +85,9 @@ a:hover {
   .MenuButton {
     display: block;
     cursor: pointer;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
   }
 
   .Menu.Show {
@@ -94,7 +98,7 @@ a:hover {
     right: 20px;
     z-index: 1000;
     padding: 10px;
-    background-color: rgba(131, 7, 7, 0.59);
+    background-color: rgba(0, 0, 0, 0.85);
     height: 15%;
   }
 }

@@ -1,6 +1,6 @@
 div.parent {
     width: 100vw;
-    height: 100vh;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,20 +13,19 @@ div.codeContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90vw;
+    width: 90%;
     height: 12vh;
     background-color: white;
-    border:1px solid;
+    border:4px solid;
     border-radius: 20px;
     padding: 10px;
 }
 
 input.codeInput {
-    border: 1px solid;
+    border: 2.5px solid;
     border-radius: 15px;
-    padding: 2%;
     width: 30%;
-    height: 20%;
+    height: 63px;
     align-self: center;
     justify-self: right;
     margin-left: auto;
@@ -39,11 +38,10 @@ input.codeInput {
 }
 
 input.year {
-    border: 1px solid;
+    border: 2.5px solid;
     border-radius: 15px;
-    padding: 2%;
     width: 5%;
-    height: 20%;
+    height: 63px;
     font-size: 24px;
     font-family: "Chakra Petch", serif;
     font-weight: 500;
@@ -52,11 +50,10 @@ input.year {
 }
 
 input.make {
-    border: 1px solid;
+    border: 2.5px solid;
     border-radius: 15px;
-    padding: 2%;
     width: 8%;
-    height: 20%;
+    height: 63px;
     font-size: 24px;
     font-family: "Chakra Petch", serif;
     font-weight: 500;
@@ -64,11 +61,10 @@ input.make {
 }
 
 input.model {
-    border: 1px solid;
+    border: 2.5px solid;
     border-radius: 15px;
-    padding: 2%;
     width: 15%;
-    height: 20%;
+    height: 63px;
     font-size: 24px;
     font-family: "Chakra Petch", serif;
     font-weight: 500;
@@ -79,12 +75,12 @@ button.searchButton {
     margin-left:30%;
     margin-right:5px;
     justify-self: right;
-    height:70%;
+    height:63px;
     width: 9%;
     font-family: "Chakra Petch", serif;
     font-weight: 600;
-    font-size: 1.75em;
     border-radius: 15px;
+    font-size: 24px;
 }
 
 button.searchButton:active {
@@ -96,8 +92,22 @@ div.resultContainer {
     width: 91.204%;
     margin-top: 30px;
     padding: 20px;
-    border: 1px solid;
+    border: 4px solid;
     box-sizing: border-box;
     border-radius: 20px;
     background-color: white;
+}
+
+@media (max-width:1275px) {
+    button.searchButton, input.codeInput, input.year, input.make, input.model {
+        font-size: 18px;
+    }
+
+
+}
+
+@media (max-width: 850px) {
+    button.searchButton, input.codeInput, input.year, input.make, input.model {
+        font-size: 10px;
+    }
 }

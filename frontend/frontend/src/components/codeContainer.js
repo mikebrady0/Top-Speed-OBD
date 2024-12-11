@@ -26,7 +26,7 @@ const CodeContainer = () => {
 
     const handleSearch = async () => {
         try {
-            const response = await fetch('https://api.example.com/obdii/${code}');
+            const response = await fetch('https://api.placeholder.com/obdii/${code}');
             const data = await response.json();
             setResult(data);
         } catch (error) {
