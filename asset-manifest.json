@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Top-Speed-OBD/static/css/main.d705358f.css",
+    "main.js": "/Top-Speed-OBD/static/js/main.552b6774.js",
+    "index.html": "/Top-Speed-OBD/index.html",
+    "main.d705358f.css.map": "/Top-Speed-OBD/static/css/main.d705358f.css.map",
+    "main.552b6774.js.map": "/Top-Speed-OBD/static/js/main.552b6774.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d705358f.css",
+    "static/js/main.552b6774.js"
+  ]
+}
