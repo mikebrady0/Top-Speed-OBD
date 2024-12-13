@@ -7,7 +7,7 @@ const CodeContainer = () => {
     const [year, setYear] = useState('');
     const [make, setMake] = useState('');
     const [model, setModel] = useState('')
-    const [error, setError] = useState(null);
+    //const [error, setError] = useState(null);
 
     const handleCodeChange = (e) => {
         setCode(e.target.value);
