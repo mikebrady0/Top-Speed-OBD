@@ -111,3 +111,17 @@ div.resultContainer {
         font-size: 10px;
     }
 }
+
+@media (max-width: 500px) {
+
+
+    button.searchButton, input.codeInput, input.year, input.make, input.model {
+        width: 75%;
+
+    }
+
+    button.searchButton {
+        margin-left: auto;
+    }
+
+}
