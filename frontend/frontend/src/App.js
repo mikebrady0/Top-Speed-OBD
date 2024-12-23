@@ -9,19 +9,14 @@ import SavedLookups from "./components/savedLookups";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         {/* Navigation Bar */}
         <Navbar />
         {/* Page with route-based component rendering */}
         <div className="pages">
           <Routes>
             {/* Hero and CodeContainer only render here */}
-            <Route path="/" element={
-              <>
-                <Hero />
-                <CodeContainer />
-              </>
-            } />
+           <Route path="/" element={<><Hero/><CodeContainer/></>} />
             {/* SavedLookups component only here */}
             <Route path="/saved-lookups" element={<SavedLookups />} />
           </Routes>
