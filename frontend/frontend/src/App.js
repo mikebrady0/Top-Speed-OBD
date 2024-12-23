@@ -16,7 +16,7 @@ function App() {
         <div className="pages">
           <Routes>
             {/* Hero and CodeContainer only render here */}
-           <Route path="/" element={<><Hero/><CodeContainer/></>} />
+           <Route path="/"/>
             {/* SavedLookups component only here */}
             <Route path="/saved-lookups" element={<SavedLookups />} />
           </Routes>
