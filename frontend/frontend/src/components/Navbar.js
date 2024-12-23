@@ -26,7 +26,7 @@ const Navbar = () => {
                     <Link to='/'>
                         <li>Home</li>
                     </Link>
-                    <Link>
+                    <Link to='/saved-lookups'>
                         <li>OBD Library</li>
                     </Link>
                 </ul>

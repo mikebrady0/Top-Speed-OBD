@@ -71,8 +71,20 @@ input.model {
     font-style: normal;
 }
 
+button.saveBtn {
+    margin-left:25%;
+    margin-right:5px;
+    justify-self: right;
+    height:63px;
+    width: 9%;
+    font-family: "Chakra Petch", serif;
+    font-weight: 600;
+    border-radius: 15px;
+    font-size: 24px;
+}
+
 button.searchButton {
-    margin-left:30%;
+    /* margin-left:30%; */
     margin-right:5px;
     justify-self: right;
     height:63px;
@@ -88,6 +100,11 @@ button.searchButton:active {
     background-color: black;
 }
 
+button.saveBtn:active {
+    color:white;
+    background-color: black;
+}
+
 div.resultContainer {
     width: 91.204%;
     margin-top: 30px;
@@ -99,7 +116,7 @@ div.resultContainer {
 }
 
 @media (max-width:1275px) {
-    button.searchButton, input.codeInput, input.year, input.make, input.model {
+    button.searchButton, input.codeInput, input.year, input.make, input.model, button.saveBtn {
         font-size: 18px;
     }
 
@@ -107,7 +124,7 @@ div.resultContainer {
 }
 
 @media (max-width: 850px) {
-    button.searchButton, input.codeInput, input.year, input.make, input.model {
+    button.searchButton, input.codeInput, input.year, input.make, input.model, button.saveBtn {
         font-size: 10px;
     }
 }
@@ -115,12 +132,12 @@ div.resultContainer {
 @media (max-width: 500px) {
 
 
-    button.searchButton, input.codeInput, input.year, input.make, input.model {
+    button.searchButton, input.codeInput, input.year, input.make, input.model, button.saveBtn {
         width: 75%;
 
     }
 
-    button.searchButton {
+    button.searchButton, button.saveBtn {
         margin-left: auto;
     }
 

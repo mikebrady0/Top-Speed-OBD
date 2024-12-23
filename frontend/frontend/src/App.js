@@ -4,24 +4,28 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/hero-section";
 import CodeContainer from "./components/codeContainer";
-
+import SavedLookups from "./components/savedLookups";
 
 function App() {
   return (
-   <div className="App">
+    <div className="App">
       <BrowserRouter>
-        {/* Navigation Bar and Header */}
+        {/* Navigation Bar */}
         <Navbar />
-        {/* Page element with route path */}
+        {/* Page with route-based component rendering */}
         <div className="pages">
           <Routes>
-            <Route path="/"/>
+            {/* Hero and CodeContainer only render here */}
+            <Route path="/" element={
+              <>
+                <Hero />
+                <CodeContainer />
+              </>
+            } />
+            {/* SavedLookups component only here */}
+            <Route path="/saved-lookups" element={<SavedLookups />} />
           </Routes>
-          {/* Leading Hero section */}
-          <Hero/>
-          {/**OBDII code container to list codes*/}
-          <CodeContainer/>
-        </div> 
+        </div>
       </BrowserRouter>
     </div>
   );

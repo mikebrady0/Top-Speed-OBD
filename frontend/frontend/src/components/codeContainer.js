@@ -7,8 +7,39 @@ const CodeContainer = () => {
     const [year, setYear] = useState('');
     const [make, setMake] = useState('');
     const [model, setModel] = useState('')
-    //const [error, setError] = useState(null);
 
+    const handleSave = async () => {
+        if (!year || !make || !model || !code || !result) {
+            alert('All fields are required for lookup.')
+            return;
+        }
+
+        const lookup = { year, make, model, code, result };
+        console.log('Saving lookup data:',lookup);
+
+        try {
+            const response = await fetch('http://localhost:5000/api/lookups', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify(lookup),
+            });
+
+            if (response.ok) {
+                alert('Lookup saved seuccessfully!');
+                setYear('');
+                setMake('');
+                setModel('');
+                setCode('');
+                setResult(null);
+            } else {
+                alert('Failed to save lookup');
+            }
+        } catch (error) {
+            console.error('Error saving lookup', error);
+        }
+    }
+
+    
     const handleCodeChange = (e) => {
         setCode(e.target.value);
     };
@@ -55,6 +86,7 @@ const CodeContainer = () => {
                 <input className='year' value={year} onChange={handleYearChange} type="text" placeholder='Year'/>
                 <input className='make' value={make} onChange={handleMakeChange} type='text' placeholder='Make' />
                 <input className='model' value={model} onChange={handleModelChange} type='text' placeholder='Model'/>
+                <button className='saveBtn' onClick={handleSave}>Save</button>
                 <button className="searchButton" onClick={handleSearch}>Search</button>
                 <input className="codeInput" type="text" value={code} placeholder='Enter OBDII Code' onChange={handleCodeChange}/>
             </div>
