@@ -11,12 +11,12 @@ function App() {
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         {/* Navigation Bar */}
-        <Navbar />
+        <Navbar/>
         {/* Page with route-based component rendering */}
         <div className="pages">
           <Routes>
             {/* Hero and CodeContainer only render here */}
-           <Route path="/"/>
+           <Route path="/" element={<><Hero/><CodeContainer/></>}/>
             {/* SavedLookups component only here */}
             <Route path="/saved-lookups" element={<SavedLookups />} />
           </Routes>

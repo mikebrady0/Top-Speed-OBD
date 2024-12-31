@@ -31,11 +31,12 @@ const SavedLookups = () => {
                                 <p><strong>Make: </strong>{lookup.make}</p>
                                 <p><strong>Model: </strong>{lookup.model}</p>
                                 <p><strong>Code: </strong>{lookup.code}</p>
-                                <p><strong>{lookup.code}: {lookup.result.definition}</strong></p>
+                                <p><strong>{lookup.result?.code}: {lookup.result?.definition}</strong></p>
+
                                 <div>
                                     <p>Possible Causes</p>
                                         <ul>
-                                            {lookup.result.cause.map((item, index) => (
+                                            {lookup?.result?.cause.map((item, index) => (
                                             <li key={index}>{item}</li>
                                         ))}
                                         </ul>

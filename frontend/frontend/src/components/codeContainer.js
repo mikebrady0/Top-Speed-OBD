@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const CodeContainer = () => {
     const [code, setCode] = useState('');
-    const [result, setResult] = useState(null);
+    const [result, setResult] = useState('');
     const [year, setYear] = useState('');
     const [make, setMake] = useState('');
     const [model, setModel] = useState('')
@@ -30,7 +30,7 @@ const CodeContainer = () => {
                 setMake('');
                 setModel('');
                 setCode('');
-                setResult(null);
+                setResult('');
             } else {
                 alert('Failed to save lookup');
             }
