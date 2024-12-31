@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Top-Speed-OBD/static/css/main.df882807.css",
-    "main.js": "/Top-Speed-OBD/static/js/main.17548666.js",
+    "main.js": "/Top-Speed-OBD/static/js/main.d0038f7d.js",
     "index.html": "/Top-Speed-OBD/index.html",
     "main.df882807.css.map": "/Top-Speed-OBD/static/css/main.df882807.css.map",
-    "main.17548666.js.map": "/Top-Speed-OBD/static/js/main.17548666.js.map"
+    "main.d0038f7d.js.map": "/Top-Speed-OBD/static/js/main.d0038f7d.js.map"
   },
   "entrypoints": [
     "static/css/main.df882807.css",
-    "static/js/main.17548666.js"
+    "static/js/main.d0038f7d.js"
   ]
 }
